@@ -2,17 +2,16 @@ class SuppliersController < ApplicationController
   before_action :set_supplier, only: %i[create update]
 
   def index
-    @supliers = Supplier.last(10)
+    @suppliers = Supplier.last(100)
   end
-  
+
   def create
     @supplier = Supplier.new(supplier_params)
     if @supplier.save
       flash[:success] = 'Supplier was created '
-      render :index
     else
       flash[:error] = 'Supplier wasnt create'
-      render :new
+      render :create
     end
   end
 

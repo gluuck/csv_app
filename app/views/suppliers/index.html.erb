@@ -1,0 +1,22 @@
+<h1>ggg</h1>
+
+<% @suppliers.each do |supplier| %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Supplier code</th>
+      <th scope="col">Supplier name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= supplier.id %></th>
+      <td><%= supplier.supplier_code %></td>
+      <td><%= supplier.supplier_name%></td>
+    </tr>
+   
+  </tbody>
+</table>
+<% end %>

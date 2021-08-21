@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_08_18_124105) do
   enable_extension "plpgsql"
 
   create_table "suppliers", force: :cascade do |t|
-    t.integer "supplier_code"
+    t.string "supplier_code"
     t.string "supplier_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
