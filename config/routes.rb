@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'suppliers/index'
-  get 'suppliers/create'
-  get 'suppliers/update'
+  resources :skus
+  resources :suppliers
 
 end

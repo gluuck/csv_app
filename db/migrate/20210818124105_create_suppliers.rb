@@ -1,7 +1,7 @@
 class CreateSuppliers < ActiveRecord::Migration[6.1]
   def change
     create_table :suppliers do |t|
-      t.string :supplier_code
+      t.integer :supplier_id
       t.string :supplier_name
 
       t.timestamps

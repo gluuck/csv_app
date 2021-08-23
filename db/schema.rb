@@ -10,13 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_124105) do
+ActiveRecord::Schema.define(version: 2021_08_23_045758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "skus", force: :cascade do |t|
+    t.string "sku"
+    t.bigint "supplier_id"
+    t.string "part_name"
+    t.string "col_1"
+    t.string "col_2"
+    t.string "col_3"
+    t.string "col_4"
+    t.string "col_5"
+    t.float "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["supplier_id"], name: "index_skus_on_supplier_id"
+  end
+
   create_table "suppliers", force: :cascade do |t|
-    t.string "supplier_code"
+    t.integer "supplier_id"
     t.string "supplier_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

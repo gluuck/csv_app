@@ -1,3 +1,4 @@
 class Supplier < ApplicationRecord
-  validates :supplier_code, presence: true, uniqueness: true
+  has_many :skus
+  validates :supplier_id,:supplier_name, presence: true
 end
