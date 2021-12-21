@@ -16,23 +16,22 @@ ActiveRecord::Schema.define(version: 2021_08_23_045758) do
   enable_extension "plpgsql"
 
   create_table "skus", force: :cascade do |t|
-    t.string "sku"
-    t.bigint "supplier_id"
-    t.string "part_name"
-    t.string "col_1"
-    t.string "col_2"
-    t.string "col_3"
-    t.string "col_4"
-    t.string "col_5"
-    t.float "price"
+    t.string "1978"
+    t.string "2437"
+    t.string "Onesync GPS Power Kit"
+    t.string "GFM"
+    t.string "407"
+    t.string "1-976-976-6558 x867"
+    t.string "607074511915"
+    t.string "nil"
+    t.string "282.97"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["supplier_id"], name: "index_skus_on_supplier_id"
   end
 
   create_table "suppliers", force: :cascade do |t|
-    t.integer "supplier_id"
-    t.string "supplier_name"
+    t.string "1443"
+    t.string "Spencer-Turcotte"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
